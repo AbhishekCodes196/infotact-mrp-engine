@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MRP System Login</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; padding-top: 50px; }
+        .login-box { border: 1px solid #ccc; padding: 20px; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>MRP Login</h2>
+        <input type="text" id="username" placeholder="Username"><br><br>
+        <input type="password" id="password" placeholder="Password"><br><br>
+        <button onclick="login()">Login</button>
+    </div>
+
+    <script>
+        function login() {
+            // Simple check for now
+            if(document.getElementById('username').value === 'admin' && 
+               document.getElementById('password').value === 'admin') {
+                window.location.href = 'index.html'; // Redirect to your existing dashboard
+            } else {
+                alert('Invalid Credentials');
+            }
+        }
+    </script>
+</body>
+</html>
